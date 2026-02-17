@@ -20,3 +20,5 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_M16TRACKER }}
           channelId: live
           projectId: m16tracker
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
