@@ -23,3 +23,4 @@ jobs:
           projectId: m16tracker
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
+          FORTNITE_API_KEY: ${{ secrets.FORTNITE_API_KEY }}
