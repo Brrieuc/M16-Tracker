@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* GentleMates Brand Colors - Updated for M16 Aesthetic */
+  --m8-pink: #ff66c4;
+  /* Lighter, neon pink from logo */
+  --m8-purple: #bd00ff;
+  /* Deep purple for gradients */
+  --m8-black: #0a0a0a;
+  /* Deep matte black */
+  --m8-white: #ffffff;
+  --m8-grey: #1c1c1c;
+
+  --background: var(--m8-black);
+  --foreground: var(--m8-white);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-m8-pink: var(--m8-pink);
+  --color-m8-black: var(--m8-black);
+  --color-m8-white: var(--m8-white);
+  --color-m8-grey: var(--m8-grey);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-in-from-top {
+  animation-name: slideInFromTop;
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
