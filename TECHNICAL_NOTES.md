@@ -25,6 +25,17 @@ Les noms bruts de l'API sont nettoyés pour être lisibles :
 - Les appels API se font coté serveur (`use server`) pour protéger la clé API `FORTNITE_API_KEY`.
 - En cas d'erreur API, le système renvoie un tableau vide plutôt que de crasher.
 
+### 5. Fonctionnalités "Live"
+- **Actualisation** : Bouton de rafraîchissement manuel qui invalide le cache serveur (`tags: ['rankings']`).
+- **Mode Anti-Spoil** : Délai paramétrable (1-10 min) pour masquer les résultats récents lors des diffusions en direct différées.
+    - Masque le score total et le rang si une partie s'est terminée dans la fenêtre de délai.
+    - Filtre les détails des matchs récents dans la modale joueur.
+
+### 6. Déploiement
+- **Hébergement** : Firebase Hosting (`m16tracker`).
+- **CI/CD** : GitHub Actions (`.github/workflows/firebase-hosting-merge.yml`).
+- **Variables d'Environnement** : `FORTNITE_API_KEY` (secret GitHub).
+
 ---
 **Dernière mise à jour stable** : 17 Février 2026
-**Version** : 1.2 "Secured Base"
+**Version** : 1.3 "Live Ops & Deploy"
